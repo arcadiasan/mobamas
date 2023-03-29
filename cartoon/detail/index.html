@@ -1,0 +1,261 @@
+<html lang="ja" xml:lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="-1">
+        <meta name="format-detection" content="telephone=no">
+        <title>アイドルマスター シンデレラガールズ</title>
+        <link rel="stylesheet" type="text/css" href="../../idolmaster/css/rich/new_mypage_common.css" media="all">
+        <script type="text/javascript">if(window.localStorage){var displaySet=localStorage.getItem('DisplayPositionSet');if(displaySet==1){if(navigator.userAgent.indexOf('Android')>0){document.write('<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">');document.getElementsByTagName('html')[0].style.zoom=document.documentElement.clientWidth/320;}else{document.write('<meta name="viewport" content="width=320, user-scalable=no">');}window.addEventListener('resize',function(){if(navigator.userAgent.indexOf('Android')>0)document.getElementsByTagName('html')[0].style.zoom=document.documentElement.clientWidth/320;});}else{document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');}}else{document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');}</script>
+        <script src="../../idolmaster/js/jquery-2.2.2.min.js"></script>
+        <script>
+            (function () {
+                var _path = location.href;
+                var _spec_obj;
+                var _spec = 'none';
+                var version = 1;
+                // access方法検出
+                _spec_obj = {
+                    'isNative': false,
+                    'isAndApp': false,
+                    'isShellApp': false,
+                    'isIosApp': false,
+                    'isChromeApp': false
+                };
+                window._spec = _spec_obj;
+                if (_spec.isAndApp) {
+                    _spec = 'andapp'
+                } else if (_spec.isIosApp) {
+                    _spec = 'iosApp';
+                } else if (_spec.isShellApp) {
+                    _spec = 'shellapp';
+                } else {
+                    _spec = 'browser?';
+                }
+            })();
+        </script>
+        <script src="../../idolmaster/js/underscore-min.js"></script>
+        <script src="../../idolmaster/js/require.js"></script>
+        <script>
+            requirejs.config({
+                paths: {
+                    easeljs: "https://sp.pf-img-a.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2Fmobamas.net%2Fidolmaster%2Fjs%2Feaseljs-0.8.2.min.js%3Fv%3D20210904134922",
+                    easeljs_0_7_1: "https://sp.pf-img-a.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2Fmobamas.net%2Fidolmaster%2Fjs%2Feaseljs-0.7.1.min.js%3Fv%3D20210904134922", //スプライトを読むためのバージョン
+                    tweenjs: "https://sp.pf-img-a.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2Fmobamas.net%2Fidolmaster%2Fjs%2Ftweenjs-0.6.2.min.js%3Fv%3D20210904134938",
+                    movieclipjs: "https://sp.pf-img-a.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2Fmobamas.net%2Fidolmaster%2Fjs%2Fmovieclip-0.7.1.min.js%3Fv%3D20210904134922",
+                    createjs: "https://sp.pf-img-a.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2Fmobamas.net%2Fidolmaster%2Fjs%2Fcreatejs-2015.11.26.min.js%3Fv%3D20210904134921",
+                }
+            })
+        </script>
+        <script src="../../idolmaster/js/common.js"></script>
+        <script src="../../idolmaster/js/common_new.js"></script>
+        <script>
+            $(function(){ window.$ibox = $('.ibox').ibox(); });
+        </script>
+        <script type="text/javascript">var se_flg = 0, bgm_flg = 0, chrome_app_flg = 0, chrome_app_extension_id = 'dnacabmnfmejgfffmcehejcmiciinpej';</script>
+        <script type="text/javascript" src="../../idolmaster/js/app_sound.js"></script>
+    </head>
+    <body id="cartoon" class="scene">
+        <div id="top" class="page_container jsOnBtn">
+            <nav class="area_menu_header">
+                <div class="area_menu_header_6btn">
+                    <h1 id="JtextLimit">シンデレラガールズ劇場</h1>
+                    <ul>
+                        <li>
+                            <a class="head_menu_01" href="../../">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_02 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_03 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_04 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_05 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_06 se_000 disabled" id="headerAcd">
+                                <div></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <input id="delay" type="hidden" value="0">
+            <link rel="stylesheet" type="text/css" href="../../idolmaster/css/rich/theater.css" media="all">
+            <div class="theater-content m-Btm12">
+                <div class="theater-page_header m-Head_img m-Btm4"></div>
+                <div class="theater-title_area">
+                    <a class="theater-next jsOnDesignBtn"></a>
+                    <div class="theater-story_num"></div>
+                    <div class="theater-update_date"></div>
+                    <div class="theater-latest_title"></div>
+                    <a class="theater-btn_like jsOnDesignBtn _blank disabled"></a>
+                    <a class="theater-previous jsOnDesignBtn"></a>
+                </div>
+                <div class="theater-cartoon_area m-Top8 m-Btm8">
+                </div>
+                <div class="theater-title_area">
+                    <a class="theater-next jsOnDesignBtn"></a>
+                    <div class="theater-story_num"></div>
+                    <div class="theater-update_date"></div>
+                    <div class="theater-latest_title"></div>
+                    <a class="theater-btn_like jsOnDesignBtn _blank disabled"></a>
+                    <a class="theater-previous jsOnDesignBtn"></a>
+                </div>
+                <div class="theater-common_area m-Top12 m-Btm8">
+                    <div class="theater-common_area_title theater-text_appearance_idol"></div>
+                    <div class="theater-appearance_idol_list m-Top8 m-Cnt t-Cnt">
+                        <div class="theater-idol_bg m-Top8 m-Btm4">
+                            <div class="theater-idol_wrapper">
+                                <div class="theater-idol_image"></div>
+                            </div>
+                            <div class="theater-idol_name_frame t-Cnt"></div>
+                            <a class="theater-btn_selected_theater disabled jsOnDesignBtn"></a>
+                            <a class="theater-btn_idol_gallery jsOnDesignBtn"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="area-btn-common _base-width" style="-webkit-box-pack:center;">
+                    <a href="https://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2Fmobamas.net%2Fidolmaster%2Fmemory%2Fdetail%2F1743%3Fl_frm%3DCartoon_scene_1%26rnd%3D231552836" class="btn_normal_line_2" style="font-size:11px;">イベントメモリー</a>
+                </div>
+                <div class="theater-page_footer"></div>
+            </div>
+            <a href="../">
+                <div class="backLink">劇場TOP</div>
+            </a>
+            <script>
+                $(function () {
+                    var searchParams = new URLSearchParams(window.location.search);
+                    var scene = searchParams.get("scene");
+                    if (!scene){
+                        alert("Bad URL!");
+                        window.history.back();
+                        return;
+                    }
+                    
+                    var req = new XMLHttpRequest();
+                    req.open('GET', "../../idolmaster/cartoon/cartoon.json", false);
+                    req.send();
+                    
+                    details = JSON.parse(req.response);
+                    detail = details[scene];
+                    if (!detail) {
+                        alert("Failed to fetch cartoon detail!");
+                        window.history.back();
+                        return;
+                    }
+                    
+                    window.localStorage.setItem("history_id", scene);
+                    
+                    $(".theater-story_num").text(detail.num_text);
+                    $(".theater-update_date").text(detail.date + "更新");
+                    $(".theater-latest_title").text(detail.title);
+                    $(".theater-cartoon_area").html('<img src="' + detail.cartoon + '" width="292"><br>');
+                    
+                    var sceneId = parseInt(scene);
+                    var btnPrevs = $(".theater-previous");
+                    if (sceneId > 1) {
+                        btnPrevs.attr("href", "./?scene=" + (sceneId-1));
+                    } else {
+                        btnPrevs.hide();
+                    }
+                    
+                    var btnNexts = $(".theater-next");
+                    if (sceneId < _.size(details)) {
+                        btnNexts.attr("href", "./?scene=" + (sceneId+1));
+                    } else {
+                        btnNexts.hide();
+                    }
+                    
+                    var container = document.getElementsByClassName("theater-appearance_idol_list")[0];
+                    for (var i = 0; i < detail.casts.length; i++) {
+                        cast = detail.casts[i];
+                        elem = document.createElement("div");
+                        elem.classList.add("theater-appearance_idol");
+                        elem.setAttribute("data-hash-id", cast.hash_id);
+                        elem.setAttribute("data-idol-id", cast.idol_id);
+                        elem.setAttribute("data-name", cast.name);
+                        elem.setAttribute("data-attribute-name", cast.attr);
+                        elem.setAttribute("data-rarity", cast.rarity);
+                        elem.setAttribute("data-image", cast.portrait);
+                        
+                        elem_icon = document.createElement("img");
+                        elem_icon.classList.add("theater-appearance_idol_img");
+                        elem_icon.src = cast.icon;
+                        
+                        elem.appendChild(elem_icon);
+                        container.appendChild(elem);
+                    }
+                    
+                    var url_idol_gallery = '../../gallery/detail/?chara_id=__chara_id__';
+                    var $appearance_idols = $(".theater-appearance_idol");
+                    
+                    $appearance_idols.on("click", function (e) {
+                        var $target = $(e.currentTarget);
+                        var attr_name = $target.data("attribute-name");
+                        var rarity = $target.data("rarity");
+                        if ($target.hasClass("_selected")) {
+                            return;
+                        }
+                        $(".theater-idol_image").removeClass("_appear");
+                        setTimeout(function () {
+                            $appearance_idols.removeClass("_selected");
+                            $target.addClass("_selected");
+                            $(".theater-idol_name_frame").text($target.data("name"));
+                            $(".theater-idol_name_frame")[0].setAttribute("data-attribute-name", attr_name);
+                            $(".theater-idol_name_frame")[0].setAttribute("data-attribute-name", attr_name);
+                            $(".theater-idol_bg")[0].setAttribute("data-type", attr_name + "_" + rarity);
+                            $(".theater-idol_image").css({
+                                "background-image": "url(" + $target.data("image") + ")"
+                            });
+                            $(".theater-idol_image").addClass("_appear");
+                        }, 0);
+                    })
+                    
+                    $(".theater-idol_image").on('webkitAnimationEnd', function (e) {
+                        $(e.currentTarget).removeClass("_appear");
+                    });
+                    
+                    $appearance_idols.eq(0).trigger("click");
+                    $(".theater-btn_idol_gallery").on("click", function () {
+                        var chara_id = $appearance_idols.filter("._selected").data("idol-id");
+                        location.href = url_idol_gallery.replace("__chara_id__", chara_id);
+                    })
+                })
+            </script>
+            <a href="../../">
+                <div class="backLink">マイスタジオ</div>
+            </a>
+            <footer>
+                <div class="line_idolmaster"></div>
+                <a href="#top" id="toPageTop" class="mypage_under">
+                    <div></div>
+                </a>
+                <div class="t-Cnt">©T.K. THE IDOLM@STER™ &amp; ©BNEI</div>
+            </footer>
+        </div>
+        <script>
+            window._tarminal = {
+                'native_app_flg': false,
+                'android_app_flg': false,
+                'ios_app_flg': false,
+                'shell_app_flg': false
+            };
+        </script>
+    </body>
+</html>

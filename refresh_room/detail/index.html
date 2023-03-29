@@ -1,0 +1,184 @@
+<html lang="ja" xml:lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="-1">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobage: footer-color" content="none">
+        <link rel="stylesheet" href="../../idolmaster/css/game/pex.css" media="all">
+        <script src="../../idolmaster/js/jquery-2.2.2.min.js"></script>
+        <script src="../../idolmaster/js/ilibrary.js"></script>
+        <script src="../../idolmaster/js/pex-petit-1.2.0.js"></script>
+        <script src="../../idolmaster/js/pex_common.js"></script>
+        <script src="../../idolmaster/js/min/petit_manager.min.js"></script>
+        <script src="../../idolmaster/js/min/refresh_room.min.js"></script>
+        <title>ｱｲﾄﾞﾙﾏｽﾀｰ ｼﾝﾃﾞﾚﾗｶﾞｰﾙｽﾞ </title>
+        <link rel="stylesheet" type="text/css" href="../../idolmaster/css/rich/refresh_room.css" media="all">
+        <script type="text/javascript">var se_flg = 0, bgm_flg = 0, chrome_app_flg = 0, chrome_app_extension_id = 'dnacabmnfmejgfffmcehejcmiciinpej';</script>
+        <script type="text/javascript" src="../../idolmaster/js/app_sound.js"></script>
+    </head>
+    <body>
+        <article>
+            <section id="pageContainer" class="m-Btm0">
+                <div id="bg_space" class="large-size"></div>
+                <div id="jsEyeCatch">
+                    <div style="margin-top:120px"><img src="../../idolmaster/image_sp/petit_cg/ui/sprite/loading/working_1.gif" width="195" height="139"></div>
+                    <div style="margin-top:-80px"><img src="../../idolmaster/image_sp/petit_cg/ui/sprite/loading/loading.gif" width="102" height="102"></div>
+                </div>
+                <div class="effect-container large-size">
+                    <div id="animation-container"></div>
+                    <div id="dialogue" class="animation"></div>
+                    <div class="story" style="text-align:left;">
+                        <div class="comment-container">
+                            <span></span><br>
+                            <span></span><br>
+                            <span></span><br>
+                        </div>
+                        <a href="#" class="story_btn" style="display:none;"></a>
+                    </div>
+                </div>
+                <div id="name-plate" class="large-size">
+                </div>
+                <a id="next" class="next large-size" href="#"></a>
+            </section>
+        </article>
+        <script type="text/javascript">
+            (function(){
+            var refreshRoom = window.refreshRoom || {};
+            var ua = navigator.userAgent;
+            var in_chome = false;
+            try {
+                in_chrome = (chrome in window);
+            } catch (e) {
+                in_chrome = false;
+            }
+            refreshRoom.is_pc = in_chrome || (window.chrome ? true : false) && (window.chrome.webstore) || ua.indexOf('ChromeApp') > -1 || ua.indexOf('AAWebview') > -1;
+            refreshRoom.old_os = ua.match(/(OS [3-7]|Android [2-4])/);
+            
+            var searchParams = new URLSearchParams(window.location.search);
+            var id = searchParams.get("id");
+            id = id ? parseInt(id) : 1;
+            
+            if (id < 1) id = 1;
+            if (id > 175) id = 175;
+            
+            var req = new XMLHttpRequest();
+            req.open('GET', "../../idolmaster/refresh_room/" + id + ".json", false);
+            req.send();
+            
+            var data = JSON.parse(req.response);
+            console.log(data);
+            
+            refreshRoom.is_multiply = data.is_multiply;
+            refreshRoom.returnUrl = '../';
+            refreshRoom.dialogueSwf = data.dialogue_swf;
+            refreshRoom.data = data.data;
+            
+            var namePlateContianer = document.getElementById("name-plate");
+            namePlateContianer.setAttribute("rel", data.name_plates.length);
+            namePlateContianer.style = data.name_plates_style;
+            for (var i = 0; i < 5; i++) {
+                if (i >= data.name_plates.length) break;
+                
+                elem = document.createElement("div");
+                elem.classList.add("plate-area");
+                elem.setAttribute("rel", i + 1);
+                
+                elem_img = document.createElement("img");
+                elem_img.classList.add("plate");
+                elem_img.src = data.name_plates[i];
+                
+                elem.appendChild(elem_img);
+                namePlateContianer.appendChild(elem);
+            }
+            
+            var default_swf = data.default_swf;
+            for (var i in refreshRoom.data.idol_avatar)
+                refreshRoom.data.idol_avatar[i].swf = default_swf;
+            
+            refreshRoom.detail = data.detail;
+            refreshRoom.dummy_image_path = data.dummy_img;
+            refreshRoom.bg_list = data.bg_list;
+            
+            petitManager.loaded_action = function () {
+                if (refreshRoom.is_multiply)
+                    $('.animation').css({
+                        zoom: "50%"
+                    });
+                var margin = window.innerHeight - parseInt($('#bg_space > img').css('height'));
+                if (margin > 0)
+                    $('#pageContainer').css({
+                        "margin-top": margin * 0.5
+                    });
+                var $effect_container = $('.effect-container');
+                var $dialogue = $('#dialogue');
+                var dialogue_top = parseInt($dialogue.css('top'));
+                var dialogue_ratio = refreshRoom.dialogue.scaleSizeCheck() / 320;
+                $dialogue.css('top', dialogue_top * dialogue_ratio);
+                if (!$effect_container.hasClass('large-size')) {
+                    $dialogue.css('top', dialogue_top * dialogue_ratio);
+                    var $animation = $('.animation:not(#dialogue)');
+                    var anime_top = parseInt($animation.css('top'));
+                    $animation.css('top', anime_top * dialogue_ratio);
+                }
+            $('#jsEyeCatch').hide();
+            refreshRoom.dialogue.startSwf();
+            };
+            petitManager.setWidth(refreshRoom.dialogue.scaleSizeCheck(refreshRoom.is_pc));
+
+            var image = new Image;
+            var multiply = refreshRoom.is_pc || window.devicePixelRatio >= 1.5 && !refreshRoom.old_os ? 0.5 : 1;
+            var size = refreshRoom.dialogue.scaleSizeCheck() * multiply;
+            var ratio = size / 320;
+            image.width = size;
+            var effect_container = $('.effect-container');
+            effect_container.css({
+                width: size,
+                height: size,
+                bottom: parseInt(effect_container.css('bottom')) * ratio
+            });
+            image.onload = function () {
+                $('#bg_space').append(image);
+                var height = $(this).css('height');
+                $(this).parent().css('height', height);
+                $(image).css('top', parseInt($(image).css('top')) * ratio);
+                $('#name-plate').css({
+                    "-webkit-transform": "scale(" + ratio + ")"
+                })
+                petitManager.setCharacters(refreshRoom.data.idol_avatar);
+                refreshRoom.dialogue.setMotion();
+            }
+            image.src = refreshRoom.bg_list[refreshRoom.detail[0].bg_image];
+            })();
+            
+            function playText() {
+                if (window.refreshRoom == void 0)
+                    return;
+                refreshRoom.dialogue.comment_deferred.resolve();
+            }
+            function motion_callback(index, motion) {
+                var motion_end = refreshRoom.dialogue.walking == 0;
+                if (motion.indexOf("in_walk") > -1) {
+                    if (refreshRoom.dialogue.walking) {
+                        if (--refreshRoom.dialogue.walking > 0) {
+                            motion_end = false;
+                        } else {
+                            motion_end = true;
+                        }
+                    }
+                }
+                var filtered_plate = $('.plate-area[rel=' + index + ']');
+                if (filtered_plate.css('display') == 'none')
+                    filtered_plate.show();
+                if (motion_end) {
+                    if (refreshRoom.dialogue.motion_wait) {
+                        $('#next').trigger('click');
+                    }
+                    refreshRoom.dialogue.motion_wait = false;
+                }
+            }
+        </script>
+    </body>
+</html>

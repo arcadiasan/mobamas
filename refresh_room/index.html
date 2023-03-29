@@ -1,0 +1,265 @@
+<html lang="ja" xml:lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="-1">
+        <meta name="format-detection" content="telephone=no">
+        <title>アイドルマスター シンデレラガールズ</title>
+        <link rel="stylesheet" type="text/css" href="../idolmaster/css/rich/new_mypage_common.css" media="all">
+        <script type="text/javascript">if(window.localStorage){var displaySet=localStorage.getItem('DisplayPositionSet');if(displaySet==1){if(navigator.userAgent.indexOf('Android')>0){document.write('<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">');document.getElementsByTagName('html')[0].style.zoom=document.documentElement.clientWidth/320;}else{document.write('<meta name="viewport" content="width=320, user-scalable=no">');}window.addEventListener('resize',function(){if(navigator.userAgent.indexOf('Android')>0)document.getElementsByTagName('html')[0].style.zoom=document.documentElement.clientWidth/320;});}else{document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');}}else{document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');}</script>
+        <script src="../idolmaster/js/jquery-2.2.2.min.js"></script>
+        <script>
+            (function() {
+            var _path = location.href;
+            var _spec_obj;
+            var _spec = 'none';
+            var version = 1;
+            // access方法検出
+            _spec_obj = {
+            'isNative': false,
+            'isAndApp': false,
+            'isShellApp': false,
+            'isIosApp': false,
+            'isChromeApp': false};
+            window._spec = _spec_obj;
+            if (_spec.isAndApp) {
+            _spec = 'andapp'
+            } else if (_spec.isIosApp) {
+            _spec = 'iosApp';
+            } else if(_spec.isShellApp) {
+            _spec = 'shellapp';
+            } else {
+            _spec = 'browser?';
+            }
+            })();
+        </script>
+        <script src="../idolmaster/js/underscore-min.js"></script>
+        <script src="../idolmaster/js/require.js"></script>
+        <script src="../idolmaster/js/require.js"></script>
+        <script>
+            requirejs.config({
+            paths:{
+            easeljs       : "../idolmaster/js/easeljs-0.8.2.min",
+            easeljs_0_7_1 : "../idolmaster/js/easeljs-0.7.1.min", //スプライトを読むためのバージョン
+            tweenjs       : "../idolmaster/js/tweenjs-0.6.2.min",
+            movieclipjs   : "../idolmaster/js/movieclip-0.7.1.min",
+            createjs      : "../idolmaster/js/createjs-2015.11.26.min",
+            }
+            })
+        </script>
+        <script src="../idolmaster/js/common.js"></script>
+        <script src="../idolmaster/js/common_new.js"></script>
+        <script>
+            $(function(){ window.$ibox = $('.ibox').ibox(); });
+        </script>
+        <script>
+            $(document).ready(function(){
+              if (typeof newrelic === 'object' && typeof newrelic.setPageViewName === 'function') {
+                newrelic.setPageViewName('/idolmaster/index.php/refresh_room/index/170');
+              }
+            });
+        </script>
+        <script type="text/javascript">var se_flg = 0, bgm_flg = 0, chrome_app_flg = 0, chrome_app_extension_id = 'dnacabmnfmejgfffmcehejcmiciinpej';</script><script type="text/javascript" src="../idolmaster/js/app_sound.js"></script>
+    </head>
+    <body id="refresh_room" class="index">
+        <div id="top" class="page_container jsOnBtn">
+            <nav class="area_menu_header">
+                <div class="area_menu_header_6btn">
+                    <h1 id="JtextLimit">リフレッシュルーム一覧</h1>
+                    <ul>
+                        <li>
+                            <a class="head_menu_01" href="../">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_02 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_03 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_04 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_05 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_06 se_000 disabled" id="headerAcd">
+                                <div></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <input id="delay" type="hidden" value="0">
+            <link rel="stylesheet" type="text/css" href="../idolmaster/css/rich/refresh_room.css" media="all">
+            <header class="m-Btm12">
+                <img src="../idolmaster/image_sp/ui/refresh_room/top_refreshroom.jpg" style="width:320px;height:120px" class="m-Head_img">
+            </header>
+            <!--
+            <section>
+                <div class="selectArea type_02">
+                    <div class="yellow m-Btm8" style="line-height:100%">
+                        検索したアイドルが登場した話を表示します
+                    </div>
+                    <form class="form_detail_search" method="post" action="https://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A//mobamas.net/idolmaster/refresh_room/index%3Fl_frm%3DRefresh_room_index_1%26rnd%3D977341947">
+                        <div class="layout_area t-Lft">
+                            <div class="layout_l">
+                                <div class="blue">アイドル名</div>
+                                <div class="area-btn-common _base-width">
+                                    <input type="text" placeholder="※2文字以上、ひらがな、カタカナ検索可" value="" name="name" class="search_text_1_5 name_line">
+                                    <label class="btn_decision_sub_line_3" onclick="">
+                                    <input type="submit" class="btn-value" value="検索する">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="is_search" value="1">
+                        <style type="text/css">
+                            input::-webkit-input-placeholder {
+                            font-size:10px;text-indent: -1px;
+                            }
+                        </style>
+                    </form>
+                </div>
+            </section>
+            -->
+            <section id="refresh_link_list">
+            </section>
+            <img src="../idolmaster/image_sp/ui/line_hoshi.jpg" width="320" height="11" class="m-Btm8"><br>
+            <form method="get" action="." style="margin:0">
+                <!--<input type="hidden" name="name" value=""> -->
+                <div class="pager_area" style="height:74px;">
+                    <div class="pager_submit_area">
+                        <input type="number" name="page_num" id="jsPageNumber" pattern="\d*" value="">ページに
+                        <label class="btn_normal_line_4 _disabled m-Cnt m-Btm8" id="jsMovePagerLabel" for="jsMovePagerBtn" style="display:inline-block;vertical-align:middle;margin-left:5px;margin-bottom:3px;">
+                        <input id="jsMovePagerBtn" type="submit" value="移動" style="width:inherit;height:inherit;line-height:inherit;margin:0;"></label>
+                    </div>
+                    <div class="pager_panel_area">
+                        <input type="submit" class="btn_pager_first jsNotDisabled jsOnDesignBtn">
+                        <input type="submit" class="btn_pager_back jsNotDisabled jsOnDesignBtn">
+                        <input type="submit" class="btn_pager_next jsNotDisabled jsOnDesignBtn">
+                        <input type="submit" class="btn_pager_last jsNotDisabled jsOnDesignBtn">
+                    </div>
+                </div>
+                <script>
+                    var episodes;
+                    $('#jsPageNumber').focus(function(){$('#jsMovePagerLabel').removeClass("_disabled");});
+                    
+                    function setupList(pageNum) {
+                        var container = document.getElementById("refresh_link_list");
+                        container.innerHTML = '';
+                        
+                        var idxStart = (pageNum - 1) * 10, idxEnd = pageNum * 10;
+                        for (var i = idxStart; i < idxEnd; i++) {
+                            if (i >= episodes.length) break;
+                            detail = episodes[i];
+                            
+                            elem = document.createElement("a");
+                            elem.classList.add("refresh_link", "jsOnDesignBtn");
+                            elem.href = "./detail/?id=" + detail.id;
+                            
+                            elem_img = document.createElement("img");
+                            elem_img.src = detail.img;
+                            elem_img.classList.add("refresh_link_img");
+                            
+                            elem.appendChild(elem_img);
+                            elem.innerHTML += detail.title;
+                            container.appendChild(elem);
+                        }
+                    }
+                    
+                    function setupPager(pageNum, maxPage) {
+                        document.getElementsByClassName("pager_panel_area")[0].innerHTML += (pageNum + " / " + maxPage);
+                        var input = document.getElementById("jsPageNumber");
+                        
+                        btnFirst = document.getElementsByClassName("btn_pager_first")[0];
+                        btnFirst.addEventListener('click', function(e) {
+                            input.value = 1;
+                            console.log(input.value);
+                        });
+                        btnBack = document.getElementsByClassName("btn_pager_back")[0];
+                        btnBack.addEventListener('click', function(e) {
+                            input.value = pageNum > 1 ? pageNum - 1 : 1;
+                            console.log(input.value);
+                        });
+                        btnNext = document.getElementsByClassName("btn_pager_next")[0];
+                        btnNext.addEventListener('click', function(e) {
+                            input.value = pageNum < maxPage ? pageNum + 1 : maxPage;
+                            console.log(input.value);
+                        });
+                        btnLast = document.getElementsByClassName("btn_pager_last")[0];
+                        btnLast.addEventListener('click', function(e) {
+                            input.value = maxPage;
+                            console.log(input.value);
+                        });
+                        
+                        if (pageNum == 1) {
+                            btnFirst.disabled = true;
+                            btnFirst.classList.add("_disabled");
+                            btnBack.disabled = true;
+                            btnBack.classList.add("_disabled");
+                        }
+                        if (pageNum == maxPage) {
+                            btnNext.disabled = true;
+                            btnNext.classList.add("_disabled");
+                            btnLast.disabled = true;
+                            btnLast.classList.add("_disabled");
+                        }
+                    }
+                    
+                    $(function() {
+                        var searchParams = new URLSearchParams(window.location.search);
+                        var pageNum = searchParams.get("page_num");
+                        pageNum = pageNum ? parseInt(pageNum) : 1;
+                        
+                        var req = new XMLHttpRequest();
+                        req.open('GET', "../idolmaster/refresh_room/refresh_room.json", false);
+                        req.send();
+                        
+                        episodes = JSON.parse(req.response);
+                        episodes.reverse();
+                        
+                        var maxPage = Math.floor(episodes.length / 10) + 1;
+                        if (pageNum < 1) pageNum = 1;
+                        if (pageNum > maxPage) pageNum = maxPage;
+                        
+                        setupList(pageNum);
+                        setupPager(pageNum, maxPage);
+                    });
+                </script>
+            </form>
+            <img src="../idolmaster/image_sp/ui/line_hoshi.jpg" width="320" height="11" class="m-Btm8"><br>
+            <div class="information_light gray m-Btm12">
+                サーバーのレスポンス状況、通信状況によっては、アニメーション演出がご覧いただけない場合がございます。あらかじめご了承ください。
+            </div>
+            <a href="../">
+                <div class="backLink">マイスタジオ</div>
+            </a>
+            <footer>
+                <div class="line_idolmaster"></div>
+                <a href="#top" id="toPageTop" class="mypage_under">
+                    <div></div>
+                </a>
+                <div class="t-Cnt">©T.K. THE IDOLM@STER™ &amp; ©BNEI</div>
+            </footer>
+        </div>
+        <script>
+            window._tarminal = {
+            'native_app_flg': false,
+            'android_app_flg': false,
+            'ios_app_flg': false,
+            'shell_app_flg': false};
+        </script>
+    </body>
+</html>

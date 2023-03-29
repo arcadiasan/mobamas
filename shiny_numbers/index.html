@@ -1,0 +1,322 @@
+<html lang="ja" xml:lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="-1">
+        <meta name="format-detection" content="telephone=no">
+        <title>アイドルマスター シンデレラガールズ</title>
+        <link rel="stylesheet" type="text/css" href="../idolmaster/css/rich/new_mypage_common.css" media="all">
+        <script type="text/javascript">if(window.localStorage){var displaySet=localStorage.getItem('DisplayPositionSet');if(displaySet==1){if(navigator.userAgent.indexOf('Android')>0){document.write('<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">');document.getElementsByTagName('html')[0].style.zoom=document.documentElement.clientWidth/320;}else{document.write('<meta name="viewport" content="width=320, user-scalable=no">');}window.addEventListener('resize',function(){if(navigator.userAgent.indexOf('Android')>0)document.getElementsByTagName('html')[0].style.zoom=document.documentElement.clientWidth/320;});}else{document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');}}else{document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');}</script>
+        <script src="../idolmaster/js/jquery-2.2.2.min.js"></script>
+        <script>
+            (function () {
+                var _path = location.href;
+                var _spec_obj;
+                var _spec = 'none';
+                var version = 1;
+                // access方法検出
+                _spec_obj = {
+                    'isNative': false,
+                    'isAndApp': false,
+                    'isShellApp': false,
+                    'isIosApp': false,
+                    'isChromeApp': false
+                };
+                window._spec = _spec_obj;
+                if (_spec.isAndApp) {
+                    _spec = 'andapp'
+                } else if (_spec.isIosApp) {
+                    _spec = 'iosApp';
+                } else if (_spec.isShellApp) {
+                    _spec = 'shellapp';
+                } else {
+                    _spec = 'browser?';
+                }
+            })();
+        </script>
+        <script src="../idolmaster/js/underscore-min.js"></script>
+        <script src="../idolmaster/js/require.js"></script>
+        <script>
+            requirejs.config({
+                paths: {
+                    easeljs: "../idolmaster/js/easeljs-0.8.2.min.js",
+                    easeljs_0_7_1: "../idolmaster/js/easeljs-0.7.1.min.js",
+                    tweenjs: "../idolmaster/js/tweenjs-0.6.2.min.js",
+                    movieclipjs: "../idolmaster/js/movieclip-0.7.1.min.js",
+                    createjs: "../idolmaster/js/createjs-2015.11.26.min.js",
+                }
+            })
+        </script>
+        <script src="../idolmaster/js/common.js"></script>
+        <script src="../idolmaster/js/common_new.js"></script>
+        <script>
+            $(function(){ window.$ibox = $('.ibox').ibox(); });
+        </script>
+        <script type="text/javascript">var se_flg = 0, bgm_flg = 0, chrome_app_flg = 0, chrome_app_extension_id = 'dnacabmnfmejgfffmcehejcmiciinpej';</script>
+        <script type="text/javascript" src="../idolmaster/js/app_sound.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://sp.pf-img-a.mbga.jp/css/base.css?20171116">
+    </head>
+    <body id="radio" class="index">
+        <div id="top" class="page_container jsOnBtn">
+            <nav class="area_menu_header">
+                <div class="area_menu_header_6btn">
+                    <h1 id="JtextLimit">シャイニーナンバーズ</h1>
+                    <ul>
+                        <li>
+                            <a class="head_menu_01" href="../">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_02 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_03 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_04 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_05 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_06 se_000 disabled" id="headerAcd">
+                                <div></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <input id="delay" type="hidden" value="0">
+            <link rel="stylesheet" type="text/css" href="../idolmaster/css/mediaelementplayer.css" media="all">
+            <style>
+                .back_number{ width:310px;overflow:hidden;margin:0 auto; }
+                .back_number ul{ width:310px;overflow:hidden;margin:0 auto; }
+                .back_number li{ width:60px;float:left;margin:5px 2px 0 0; }
+                .mejs-container .mejs-controls{
+                -webkit-border-radius: 15px;
+                }
+                .mejs-container{
+                -webkit-border-radius: 15px;
+                background-color:#212121;
+                }
+                .mejs-controls .mejs-time-rail .mejs-time-total{
+                margin: 5px 0 !important;
+                }
+                .mejs-time-rail{
+                width: 130px !important;
+                position: relative;
+                left: 25px;
+                }
+                .mejs-time-rail a{
+                width: 130px !important;
+                background-image: url(../idolmaster/image_sp/campaign/animation/common/voice_gauge_black.png) !important;
+                background-size: 130px 10px !important;
+                }
+                .mejs-time{
+                position: relative;
+                left: 30px;
+                }
+                .mejs-button{
+                position: relative;
+                left: 10px;
+                }
+                .mejs-time-loaded{
+                background-image: url(../idolmaster/image_sp/campaign/animation/common/voice_gauge_black.png) !important;
+                background-size: 130px 10px !important;
+                }
+                .mejs-time-current{
+                background-image: url(../idolmaster/image_sp/campaign/animation/common/voice_gauge.png) !important;
+                background-size: 130px 10px !important;
+                }
+                .mejs-container .mejs-controls .mejs-playpause-button{
+                width: 34px !important;
+                }
+                .mejs-container .mejs-controls .mejs-playpause-button button{
+                width: 33px !important;
+                margin: 8px 5px;
+                background-size: 33px 16px !important;
+                }
+                .mejs-play button{
+                background: transparent;
+                background-image: url(../idolmaster/image_sp/campaign/animation/common/voice_play.png) !important;
+                }
+                .mejs-pause button{
+                background: transparent;
+                background-image: url(../idolmaster/image_sp/campaign/animation/common/voice_stop.png) !important;
+                }
+            </style>
+            <header>
+                <img src="../idolmaster/image_sp/campaign/radio/shinynumbers/top_03.jpg" class="m-Head_img" style="width:320px; height:120px;"><br>
+            </header>
+            <section style="margin:0;">
+                <div id="container" class="m-Btm10" style="position:relative;">
+                </div>
+            </section>
+            <section>
+                <h3 class="title_hanyo" style="margin-bottom:2px;">
+                    <div>バックナンバー</div>
+                </h3>
+                <div class="back_number">
+                </div>
+            </section>
+            <a href="https://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2Fmobamas.net%2Fidolmaster%2Fadvise%2Findex%2Fcard_9%3Fl_frm%3DRadio_index_1%26rnd%3D282491367" class="btn_important_line_1 m-Cnt m-Btm12" style="font-size:12px">音声・楽曲再生機能に関する免責事項(必読)</a>
+            <a href="../">
+                <div class="backLink">マイスタジオへ</div>
+            </a>
+            <script src="../idolmaster/js/mediaelement/build/mediaelement-and-player.min.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                var details;
+                
+                $(function () {
+                    $('div.accoBody').hide();
+                    $('div.acco a.acTrigger').click(function () {
+                        var accElm = $(this);
+                        if ($(accElm).next('div.accoBody').css('display') == 'none') {
+                            $(accElm).next('div.accoBody').slideDown(350, function () {
+                                $(accElm).children('div').css('background-image', 'url("../idolmaster/image_sp/ui/icon_arrow_up.png")');
+                            });
+                        } else {
+                            $(accElm).next('div.accoBody').slideUp(350, function () {
+                                $(accElm).children('div').css('background-image', 'url("../idolmaster/image_sp/ui/icon_arrow_under.png")');
+                            });
+                        }
+                        return false;
+                    });
+                    
+                    var searchParams = new URLSearchParams(window.location.search);
+                    var id = searchParams.get("id");
+                    id = id ? parseInt(id) : 1;
+                    
+                    var req = new XMLHttpRequest();
+                    req.open('GET', "../idolmaster/shiny_numbers/shiny_numbers.json", false);
+                    req.send();
+                    
+                    details = JSON.parse(req.response);
+                    
+                    if (id < 1) id = 1;
+                    if (id > details.length) id = details.length;
+                    
+                    detail = details[id - 1];
+                    
+                    var container = document.getElementById("container");
+                    elem_bg = document.createElement("img");
+                    elem_bg.src = detail.img_bg;
+                    elem_bg.width = "320";
+                    elem_bg.height = "430";
+                    
+                    container.appendChild(elem_bg);
+                    
+                    elem_audio_div = document.createElement("div");
+                    elem_audio_div.style = "position:absolute;width:270px;top:300px;left:0;right:0;margin:auto;";
+                    
+                    elem_audio = document.createElement("audio");
+                    elem_audio.src = detail.audio;
+                    elem_audio.controls = true;
+                    
+                    elem_audio_div.appendChild(elem_audio);
+                    container.appendChild(elem_audio_div);
+                    
+                    var back_number = document.getElementsByClassName("back_number")[0];
+                    elem_ul = document.createElement("ul");
+                    for (var i = 0; i < details.length; i++) {
+                        console.log(i + 1 == id);
+                        elem_li = document.createElement("li");
+                        elem_img = document.createElement("img");
+                        elem_img.width = "60";
+                        elem_img.height = "60";
+                        
+                        if (i + 1 == id) {
+                            elem_img.src = details[i].img_icon_gray;
+                            elem_li.appendChild(elem_img);
+                        } else {
+                            elem_img.src = details[i].img_icon;
+                            
+                            elem_link = document.createElement("a");
+                            elem_link.href = "./?id=" + (i + 1);
+                            elem_link.classList.add("jsOnDesignBtn");
+                            
+                            elem_link.appendChild(elem_img);
+                            elem_li.appendChild(elem_link);
+                        }
+                        
+                        elem_ul.appendChild(elem_li);
+                    }
+                    
+                    back_number.appendChild(elem_ul);
+                    
+
+                    $('audio').mediaelementplayer({
+                        // width of audio player
+                        audioWidth: 270,
+                        // initial volume when the player starts
+                        startVolume: 0.8,
+                        // useful for <audio> player loops
+                        loop: false,
+                        // enables Flash and Silverlight to resize to content size
+                        enableAutosize: true,
+                        // the order of controls you want on the control bar (and other plugins below)
+                        features: ['playpause', 'progress', 'current', 'duration'],
+                        // Hide controls when playing and mouse is not over the video
+                        alwaysShowControls: false,
+                        // force iPad's native controls
+                        iPadUseNativeControls: false,
+                        // force iPhone's native controls
+                        iPhoneUseNativeControls: false,
+                        // force Android's native controls
+                        AndroidUseNativeControls: false,
+                        // forces the hour marker (##:00:00)
+                        alwaysShowHours: false,
+                        // show framecount in timecode (##:00:00:00)
+                        showTimecodeFrameCount: false,
+                        // used when showTimecodeFrameCount is set to true
+                        framesPerSecond: 25,
+                        // turns keyboard support on and off for this instance
+                        enableKeyboard: true,
+                        // when this player starts, it will pause other players
+                        pauseOtherPlayers: true,
+                        // array of keyboard commands
+                        keyActions: []
+                    });
+                    $('a[class="mejs-time-total mejs-time-slider"]').addClass('se_000');
+                });
+                
+                if (typeof bgm_stop === 'function') {
+                    document.addEventListener('onShellAppReady', function (event) {
+                        bgm_stop(0)
+                    }, false);
+                    document.addEventListener('DOMContentLoaded', function (event) {
+                        bgm_stop(0)
+                    }, false);
+                    setTimeout(function () {
+                        bgm_stop(0)
+                    }, 300);
+                }
+            </script>
+            <footer>
+                <div class="line_idolmaster"></div>
+                <a href="#top" id="toPageTop" class="mypage_under">
+                    <div></div>
+                </a>
+                <div class="t-Cnt">©T.K. THE IDOLM@STER™ &amp; ©BNEI</div>
+            </footer>
+        </div>
+        <script>
+            window._tarminal = {
+                'native_app_flg': false,
+                'android_app_flg': false,
+                'ios_app_flg': false,
+                'shell_app_flg': false
+            };
+        </script>
+    </body>
+</html>

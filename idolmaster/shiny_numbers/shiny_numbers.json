@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "img_icon": "../idolmaster/image_sp/campaign/radio/shinynumbers/back_number_01.jpg",
+        "img_icon_gray": "../idolmaster/image_sp/campaign/radio/shinynumbers/back_number_gray_01.jpg",
+        "img_bg": "../idolmaster/image_sp/campaign/radio/shinynumbers/personality_01.jpg",
+        "audio": "../radio/audio/shinynumbers_01.mp4"
+    },
+    {
+        "id": 2,
+        "img_icon": "../idolmaster/image_sp/campaign/radio/shinynumbers/back_number_02.jpg",
+        "img_icon_gray": "../idolmaster/image_sp/campaign/radio/shinynumbers/back_number_gray_02.jpg",
+        "img_bg": "../idolmaster/image_sp/campaign/radio/shinynumbers/personality_02.jpg",
+        "audio": "../radio/audio/shinynumbers_02.mp4"
+    },
+    {
+        "id": 3,
+        "img_icon": "../idolmaster/image_sp/campaign/radio/shinynumbers/back_number_03.jpg",
+        "img_icon_gray": "../idolmaster/image_sp/campaign/radio/shinynumbers/back_number_gray_03.jpg",
+        "img_bg": "../idolmaster/image_sp/campaign/radio/shinynumbers/personality_03.jpg",
+        "audio": "../radio/audio/shinynumbers_03.mp4"
+    },
+    {
+        "id": 4,
+        "img_icon": "../idolmaster/image_sp/campaign/radio/shinynumbers/back_number_04.jpg",
+        "img_icon_gray": "../idolmaster/image_sp/campaign/radio/shinynumbers/back_number_gray_04.jpg",
+        "img_bg": "../idolmaster/image_sp/campaign/radio/shinynumbers/personality_04.jpg",
+        "audio": "../radio/audio/shinynumbers_04.mp4"
+    },
+    {
+        "id": 5,
+        "img_icon": "../idolmaster/image_sp/campaign/radio/shinynumbers/back_number_05.jpg",
+        "img_icon_gray": "../idolmaster/image_sp/campaign/radio/shinynumbers/back_number_gray_05.jpg",
+        "img_bg": "../idolmaster/image_sp/campaign/radio/shinynumbers/personality_05.jpg",
+        "audio": "../radio/audio/shinynumbers_05.mp4"
+    }
+]
