@@ -1,0 +1,342 @@
+<html lang="ja" xml:lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="-1">
+        <meta name="format-detection" content="telephone=no">
+        <title>アイドルマスター シンデレラガールズ</title>
+        <link rel="stylesheet" type="text/css" href="../idolmaster/css/rich/new_mypage_common.css" media="all">
+        <script type="text/javascript">if(window.localStorage){var displaySet=localStorage.getItem('DisplayPositionSet');if(displaySet==1){if(navigator.userAgent.indexOf('Android')>0){document.write('<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">');document.getElementsByTagName('html')[0].style.zoom=document.documentElement.clientWidth/320;}else{document.write('<meta name="viewport" content="width=320, user-scalable=no">');}window.addEventListener('resize',function(){if(navigator.userAgent.indexOf('Android')>0)document.getElementsByTagName('html')[0].style.zoom=document.documentElement.clientWidth/320;});}else{document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');}}else{document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');}</script>
+        <script src="../idolmaster/js/jquery-2.2.2.min.js"></script>
+        <script>
+            (function() {
+            var _path = location.href;
+            var _spec_obj;
+            var _spec = 'none';
+            var version = 1;
+            
+            _spec_obj = {
+            'isNative': false,
+            'isAndApp': false,
+            'isShellApp': false,
+            'isIosApp': false,
+            'isChromeApp': false};
+            window._spec = _spec_obj;
+            if (_spec.isAndApp) {
+            _spec = 'andapp'
+            } else if (_spec.isIosApp) {
+            _spec = 'iosApp';
+            } else if(_spec.isShellApp) {
+            _spec = 'shellapp';
+            } else {
+            _spec = 'browser?';
+            }
+            })();
+        </script>
+        <script src="../idolmaster/js/underscore-min.js"></script>
+        <script src="../idolmaster/js/require.js"></script>
+        <script>
+            requirejs.config({
+            paths:{
+            easeljs       : "../idolmaster/js/easeljs-0.8.2.min",
+            easeljs_0_7_1 : "../idolmaster/js/easeljs-0.7.1.min", //スプライトを読むためのバージョン
+            tweenjs       : "../idolmaster/js/tweenjs-0.6.2.min",
+            movieclipjs   : "../idolmaster/js/movieclip-0.7.1.min",
+            createjs      : "../idolmaster/js/createjs-2015.11.26.min",
+            }
+            })
+        </script>
+        <script src="../idolmaster/js/common.js"></script>
+        <script src="../idolmaster/js/common_new.js"></script>
+        <script>
+            $(function(){ window.$ibox = $('.ibox').ibox(); });
+        </script>
+        <script type="text/javascript">var se_flg = 0, bgm_flg = 0, chrome_app_flg = 0, chrome_app_extension_id = 'dnacabmnfmejgfffmcehejcmiciinpej';</script>
+        <script type="text/javascript" src="../idolmaster/js/app_sound.js"></script>
+    </head>
+    <body id="last_cinderella_story" class="index">
+        <div id="top" class="page_container jsOnBtn">
+            <nav class="area_menu_header">
+                <div class="area_menu_header_6btn">
+                    <h1 id="JtextLimit">ラスト・シンデレラストーリー</h1>
+                    <ul>
+                        <li>
+                            <a class="head_menu_01" href="../">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_02 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_03 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_04 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_05 disabled">
+                                <div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="head_menu_06 se_000 disabled" id="headerAcd">
+                                <div></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <input id="delay" type="hidden" value="0">
+            <style>
+            body{
+                background-image:url(../idolmaster/image_sp/ui/mypage_new/bg/bg_status_mypage_01.png);
+                 background-size:7px 7px;
+            }
+            a {
+                text-decoration:none;
+            }
+            .last_story_header {
+                width:320px;
+                height:211px;
+                background:url(../idolmaster/image_sp/last_story/top.jpg) no-repeat;
+                background-size:320px 211px;
+                position:relative;
+                margin-top:-14px;
+            }
+            .books_upper {
+                background-color: #a6afb1;
+                position:relative;
+                width:320px;
+                height:75px;
+            }
+            .books_upper .book1 {
+                position:absolute;
+                top:0px;
+                left:22px;
+            }
+            .books_upper .book2 {
+                position:absolute;
+                top:0px;
+                left:117px;
+            }
+            .books_upper .book3 {
+                position:absolute;
+                top:0px;
+                right:110px;
+            }
+            .books_upper:after{
+                position:absolute;
+                content:'';
+                display:block;
+                width:320px;
+                height:3px;
+                background:url(../idolmaster/image_sp/last_story/desk_line.png) no-repeat;
+                background-size:320px 3px;
+                top:72px;
+                left:0;
+            }
+            .books_bottom {
+                position:relative;
+                width:320px;
+                height:130px;
+                background:url(../idolmaster/image_sp/last_story/contents_bottom.png) #a6afb1 no-repeat bottom;
+                background-size:320px 100px;
+            }
+            .books_bottom .book1 {
+                position:absolute;
+                top:1px;
+                left:22px;
+            }
+            .books_bottom .book2 {
+                position:absolute;
+                top:1px;
+                left:117px;
+            }
+            .books_bottom .book3 {
+                position:absolute;
+                top:1px;
+                right:110px;
+            }
+            .books_bottom .book4 {
+                position:absolute;
+                top:1px;
+                left:22px;
+            }
+            .books_bottom .book5 {
+                position:absolute;
+                top:1px;
+                left:117px;
+            }
+            .books_bottom .book6 {
+                position:absolute;
+                top:1px;
+                right:110px;
+            }
+            .books_bottom .next_text {
+                position:absolute;
+                top:85px;
+                left:126px;
+                color:#000;
+                width: 72px;
+                text-align: center;
+                z-index:1;
+                font-size:10px;
+            }
+            .books_bottom .next_date {
+                position:absolute;
+                top:100px;
+                left:126px;
+                width: 72px;
+                text-align: center;
+                text-shadow: -1px -1px 1px #f529c3, 1px -1px 1px #f529c3, 1px 1px 1px #f529c3, -1px 1px 1px #f529c3, 1px 2px 3px rgb(245 41 195 / 60%);
+                font-size: 13px;
+            }
+            .book_btn1 {
+                position:absolute;
+                width:88px;
+                height:68px;
+                background:url(../idolmaster/image_sp/last_story/btn1.png) no-repeat;
+                background-size:88px 68px;
+            }
+            .book_btn1.gray {
+                position:absolute;
+                width:88px;
+                height:68px;
+                background:url(../idolmaster/image_sp/last_story/btn1_gray.png) no-repeat;
+                background-size:88px 68px;
+            }
+            .book_btn2 {
+                position:absolute;
+                width:88px;
+                height:68px;
+                background:url(../idolmaster/image_sp/last_story/btn2.png) no-repeat;
+                background-size:88px 68px;
+            }
+            .book_btn2.gray {
+                position:absolute;
+                width:88px;
+                height:68px;
+                background:url(../idolmaster/image_sp/last_story/btn2_gray.png) no-repeat;
+                background-size:88px 68px;
+            }
+            .book_btn3 {
+                position:absolute;
+                width:88px;
+                height:68px;
+                background:url(../idolmaster/image_sp/last_story/btn3.png) no-repeat;
+                background-size:88px 68px;
+            }
+            .book_btn3.gray {
+                position:absolute;
+                width:88px;
+                height:68px;
+                background:url(../idolmaster/image_sp/last_story/btn3_gray.png) no-repeat;
+                background-size:88px 68px;
+            }
+            .book_btn4 {
+                position:absolute;
+                width:88px;
+                height:68px;
+                background:url(../idolmaster/image_sp/last_story/btn4.png) no-repeat;
+                background-size:88px 68px;
+            }
+            .book_btn4.gray {
+                position:absolute;
+                width:88px;
+                height:68px;
+                background:url(../idolmaster/image_sp/last_story/btn4_gray.png) no-repeat;
+                background-size:88px 68px;
+            }
+            .book_btn5 {
+                position:absolute;
+                width:88px;
+                height:68px;
+                background:url(../idolmaster/image_sp/last_story/btn5.png) no-repeat;
+                background-size:88px 68px;
+            }
+            .book_btn5.gray {
+                position:absolute;
+                width:88px;
+                height:68px;
+                background:url(../idolmaster/image_sp/last_story/btn5_gray.png) no-repeat;
+                background-size:88px 68px;
+            }
+            .book_btn6 {
+                position:absolute;
+                width:88px;
+                height:68px;
+                background:url(../idolmaster/image_sp/last_story/btn6.png) no-repeat;
+                background-size:88px 68px;
+            }
+            .book_btn6.gray {
+                position:absolute;
+                width:88px;
+                height:68px;
+                background:url(../idolmaster/image_sp/last_story/btn6_gray.png) no-repeat;
+                background-size:88px 68px;
+            }
+            .desk_bottom {
+                width:320px;
+                height:120px;
+                background:url(../idolmaster/image_sp/last_story/footer.png) no-repeat;
+                background-size:320px 100px;
+            }
+            .new {
+                position:absolute;
+                width:28px;
+                height:30px;
+                background:url(../idolmaster/image_sp/last_story/icon_new.png) no-repeat;
+                background-size:28px 30px;
+                top: -2px;
+                left: -2px;
+            }
+            </style>
+            <div class="last_story_header"></div>
+            <div class="books_upper">
+                <div class="book1"><a class="book_btn1 jsOnDesignBtn"></a></div>
+                <div class="book2"><a class="book_btn2 jsOnDesignBtn"></a></div>
+                <div class="book3"><a class="book_btn3 jsOnDesignBtn"></a></div>
+            </div>
+            <div class="books_bottom">
+                <div class="book4"><a class="book_btn4 jsOnDesignBtn"></a></div>
+                <div class="book5"><a class="book_btn5 jsOnDesignBtn"></a></div>
+                <div class="book6"><a class="book_btn6 jsOnDesignBtn"></a></div>
+            </div>
+            <div class="desk_bottom"></div>
+            <script>
+                $(function() {
+                    var req = new XMLHttpRequest();
+                    req.open('GET', "../idolmaster/last_cinderella/last_cinderella.json", false);
+                    req.send();
+                    
+                    var details = JSON.parse(req.response);
+                    for (var i = 1; i <= 6; i++) {
+                        document.getElementsByClassName("book_btn" + i)[0].href = "../commu?detail_path=" + details[i]
+                    }
+                });
+            </script>
+            <footer>
+                <div class="line_idolmaster"></div>
+                <a href="#top" id="toPageTop" class="mypage_under">
+                    <div></div>
+                </a>
+                <div class="t-Cnt">©T.K. THE IDOLM@STER™ &amp; ©BNEI</div>
+            </footer>
+        </div>
+        <script>
+            window._tarminal = {
+            'native_app_flg': false,
+            'android_app_flg': false,
+            'ios_app_flg': false,
+            'shell_app_flg': false};
+        </script>
+    </body>
+</html>
