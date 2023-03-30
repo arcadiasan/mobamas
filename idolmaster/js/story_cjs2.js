@@ -90,7 +90,7 @@ function setupCJS2(data, enable_voice, return_url) {
         
         createjs.MotionGuidePlugin.install();
         var loader = new createjs.LoadQueue(false);
-        loader.setMaxConnections(1);
+        loader.setMaxConnections(6);
         loader.installPlugin(createjs.Sound);
         loader.addEventListener("fileload", function (evt) {
             handleFileLoad(evt, comp)
